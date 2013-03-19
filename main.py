@@ -54,20 +54,19 @@ if __name__ == '__main__':
     
     #Recuperation des ailes du pilote enregistre sur Parawing
     liste_aile = parawing.listAile(username)
-    print liste_aile
     
     #Ouverture du fichier csv passe en argument
-    #fic = open(argument,"rb")
+    fic = open(argument,"rb")
 
     try:
         reader = csv.DictReader(fic)
         
         for row in reader:
             print row
-            v = Vol(row['day'],row['deco'],row['atterro'],"Mescal",row['duree'],row['typev'],row['hdeco'],row['conddeco'],"",row['condatterro'],row['km'],row['altmax'],row['variomax'],row['altgain'],row['variomin'],True,"Autonome","",row['story'],"","Pas mal")
+            v = Vol(row['day'],row['deco'],row['atterro'],"ZuluXP",row['duree'],row['typev'],row['hdeco'],row['conddeco'],"",row['condatterro'],row['km'],row['altmax'],row['variomax'],row['altgain'],row['variomin'],True,"Autonome","",row['story'],"","Pas mal")
          
             # Test aile
-            print v.compareAile(v)
+            print v.compareAile(liste_aile)
          
             # Test deco
             # ex : parawing.testdeco
@@ -76,7 +75,7 @@ if __name__ == '__main__':
             # ex : parawing.testatterro
          
             #ajout du vol a un objet list
-            liste_vol.append(v)
+            #liste_vol.append(v)
    
     except csv.Error, e:
         sys.exit('file %s, line %d: %s' % (argument, reader.line_num, e))

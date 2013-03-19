@@ -274,7 +274,7 @@ class Carnet:
         
         
         
-        f = urllib2.urlopen('http://www.python.org/')
+        #f = urllib2.urlopen('http://www.python.org/')
         
         #http://carnet.parawing.net/serv_get_aile?pilote=pirk&key=cavole
       

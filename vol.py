@@ -84,10 +84,9 @@ class Vol():
     
     def compareAile(self, liste_aile):
         for aile in liste_aile:
-            print aile
-            '''if self.aile ==  aile:
+            if self.aile ==  aile:
                 resultcompaile = True
                 break
             else:
-                resultcompaile = False'''
+                resultcompaile = False
         return resultcompaile
